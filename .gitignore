@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+.DS_Store
+*.local
+.vite
+.vscode
+.idea
+
+# local-only
+dev-server.log
+
+.vercel
