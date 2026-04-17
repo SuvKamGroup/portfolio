@@ -1,33 +1,20 @@
 import { motion } from 'framer-motion'
 
-const TelegramIcon = (props) => (
+const KworkIcon = (props) => (
   <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M22 3 2 10l7 3 3 7 10-17z" />
-    <path d="m22 3-13 10" />
-  </svg>
-)
-
-const MailIcon = (props) => (
-  <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <rect x="2" y="4" width="20" height="16" rx="1" />
-    <path d="m2 6 10 7 10-7" />
+    <rect x="2" y="6" width="20" height="14" rx="1" />
+    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+    <path d="M2 13h20" />
   </svg>
 )
 
 const CONTACTS = [
   {
-    id: 'tg',
-    label: 'Telegram',
-    value: '@Suvorovdv',
-    href: 'https://t.me/Suvorovdv',
-    Icon: TelegramIcon,
-  },
-  {
-    id: 'mail',
-    label: 'Email',
-    value: 'erkobraxx@gmail.com',
-    href: 'mailto:erkobraxx@gmail.com',
-    Icon: MailIcon,
+    id: 'kwork',
+    label: 'Kwork',
+    value: 'kwork.ru/user/erkodev',
+    href: 'https://kwork.ru/user/erkodev',
+    Icon: KworkIcon,
   },
 ]
 
@@ -72,7 +59,7 @@ export default function Contacts() {
           transition={{ delay: 0.3 }}
           className="mt-6 max-w-xl text-lg text-ink2"
         >
-          Напишите в Telegram — отвечаю быстрее, чем по почте. Опишите идею в паре
+          Оставьте заказ на Kwork — это удобно и безопасно. Опишите идею в паре
           предложений, дальше разберёмся.
         </motion.p>
 
@@ -81,14 +68,14 @@ export default function Contacts() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10"
+          className="mt-14 grid grid-cols-1 gap-6 md:gap-10 max-w-xl"
         >
           {CONTACTS.map(({ id, label, value, href, Icon }) => (
             <motion.a
               key={id}
               variants={item}
               href={href}
-              target={href.startsWith('mailto') ? undefined : '_blank'}
+              target="_blank"
               rel="noopener noreferrer"
               whileHover={{
                 y: -3,
