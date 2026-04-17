@@ -7,7 +7,7 @@ export const PROJECTS = [
     description:
       'Веб-сервис для генерации презентаций с помощью AI. Пользователь описывает тему — модель собирает слайды, структуру и визуальный ряд.',
     stack: ['React', 'AI API', 'REST'],
-    href: 'https://tezis.111.88.153.18.nip.io/',
+    href: 'https://tezis.176.12.79.36.nip.io/',
     image: '/previews/Presentation_site.png',
     imageZoom: 1.2,
   },
