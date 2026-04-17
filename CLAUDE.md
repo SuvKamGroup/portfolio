@@ -69,4 +69,8 @@ When a new styled element is needed, check `tailwind.config.js` (`boxShadow.brut
 
 ## Deploy
 
-Deployed on Vercel — static build, `npm run build` output in `dist/`. Vercel auto-detects Vite; no vercel.json needed unless overriding.
+- **Prod URL:** https://denisdev.vercel.app
+- **GitHub repo:** `SuvKamGroup/portfolio` (public) — connected to Vercel project `portfolio` under `alonemos-projects`.
+- **Trigger:** `git push origin main` → Vercel auto-builds and re-points `denisdev.vercel.app` to the new deployment. Do NOT run `vercel --prod` manually unless explicitly asked — use git push.
+- Vercel auto-detects Vite; `npm run build` → `dist/`. No `vercel.json` needed unless overriding.
+- Local `npm run dev` is for previewing changes only, not a deploy mechanism.
