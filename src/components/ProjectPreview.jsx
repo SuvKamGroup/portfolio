@@ -24,13 +24,18 @@ export default function ProjectPreview({ project }) {
   if (image) {
     const isBot = project.type === 'TELEGRAM BOT'
     const zoom = project.imageZoom
+    const position = project.imagePosition || 'center'
+    const imgStyle = {
+      objectPosition: position,
+      ...(zoom ? { transform: `scale(${zoom})`, transformOrigin: 'center' } : null),
+    }
     return (
       <div className={`relative w-full h-full overflow-hidden ${isBot ? 'bg-[#17212b]' : 'bg-ink'}`}>
         <img
           src={image}
           alt={project.title}
-          style={zoom ? { transform: `scale(${zoom})`, transformOrigin: 'center' } : undefined}
-          className="w-full h-full object-cover object-center"
+          style={imgStyle}
+          className="w-full h-full object-cover"
         />
       </div>
     )

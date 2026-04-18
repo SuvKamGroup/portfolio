@@ -9,7 +9,7 @@ export const PROJECTS = [
     stack: ['React', 'AI API', 'REST'],
     href: 'https://tezis.176.12.79.36.nip.io/',
     image: '/previews/Presentation_site.png',
-    imageZoom: 1.2,
+    imagePosition: 'center 20%',
   },
   {
     id: '3dprint',
@@ -21,6 +21,7 @@ export const PROJECTS = [
     stack: ['React', 'Next.js', 'SQLite'],
     href: 'https://frontend-seven-omega-17.vercel.app/',
     image: '/previews/3d_shop.png',
+    imagePosition: 'top',
   },
   {
     id: 'cyberpunk-bar',
